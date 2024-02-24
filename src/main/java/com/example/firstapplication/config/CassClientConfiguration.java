@@ -44,7 +44,7 @@ public class CassClientConfiguration {
         provider.setServiceProperties(serviceProperties());
         provider.setTicketValidator(ticketValidator());
         provider.setKey("CAS_PROVIDER_LOCALHOST_9000");
-        // TODO UserDetailService 토큰 방식 알아보기
+        // UserDetailService 가 반드시 등록되어야 CasAuthenticationProvider 가 정상 작동 한다.
         provider.setUserDetailsService(s -> new User("ks325", "123", AuthorityUtils.createAuthorityList("ROLE_ADMIN")));
         return provider;
     }
