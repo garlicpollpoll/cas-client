@@ -45,7 +45,7 @@ public class CassClientConfiguration {
         provider.setTicketValidator(ticketValidator());
         provider.setKey("CAS_PROVIDER_LOCALHOST_9000");
         // TODO UserDetailService 토큰 방식 알아보기
-        //provider.setUserDetailsService(s -> new User("ks325", "123", AuthorityUtils.createAuthorityList("ROLE_ADMIN")));
+        provider.setUserDetailsService(s -> new User("ks325", "123", AuthorityUtils.createAuthorityList("ROLE_ADMIN")));
         return provider;
     }
 }
