@@ -19,7 +19,7 @@ public class CassClientConfiguration {
     @Bean
     public ServiceProperties serviceProperties() {
         ServiceProperties serviceProperties = new ServiceProperties();
-        serviceProperties.setService("https://shopfiesta.kr:9000/login/cas");
+        serviceProperties.setService("http://shopfiesta.kr/login/cas");
         serviceProperties.setSendRenew(false);
         return serviceProperties;
     }
