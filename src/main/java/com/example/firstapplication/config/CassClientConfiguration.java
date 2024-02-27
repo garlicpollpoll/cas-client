@@ -27,14 +27,14 @@ public class CassClientConfiguration {
     @Primary
     public AuthenticationEntryPoint authenticationEntryPoint(ServiceProperties sp) {
         CasAuthenticationEntryPoint entryPoint = new CasAuthenticationEntryPoint();
-        entryPoint.setLoginUrl("https://43.203.127.117:8443/cas/login");
+        entryPoint.setLoginUrl("https://shopfiesta.kr:8443/cas/login");
         entryPoint.setServiceProperties(sp);
         return entryPoint;
     }
 
     @Bean
     public TicketValidator ticketValidator() {
-        return new Cas30ServiceTicketValidator("https://43.203.127.117:8443/cas");
+        return new Cas30ServiceTicketValidator("https://shopfiesta.kr:8443/cas");
     }
 
     @Bean
